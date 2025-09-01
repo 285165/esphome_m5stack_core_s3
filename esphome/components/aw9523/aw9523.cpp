@@ -120,7 +120,7 @@ void AW9523GPIOPin::pin_mode(gpio::Flags flags){
 
 void set_flags(gpio::Flags flags) { this->flags_ = flags; }
 
-gpio::Flags AW9523GPIOPin::get_flags() { return this->flags_; }
+gpio::Flags get_flags() { return this->flags_; }
 
 void AW9523GPIOPin::digital_write(bool value){
   this->parent_->set_pin_value(this->port_, this->pin_, value != this->inverted_);
