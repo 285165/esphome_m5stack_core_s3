@@ -1,4 +1,4 @@
-#pragma once
+de #pragma once
 
 #include "esphome/components/i2c/i2c.h"
 #include "esphome/core/component.h"
@@ -34,7 +34,7 @@ public:
     void set_pin(AW9523Port port, uint8_t pin) { this->port_ = port; this->pin_ = pin; }
     void set_inverted(bool inverted) { this->inverted_ = inverted; }
     void set_flags(gpio::Flags flags) { this->flags_ = flags; }
-    gpio::Flags get_flags() { return this->flags_; }
+    gpio::Flags get_flags() override { return this->flags_; }
     std::string dump_summary() const override {return ""; };
 
 protected:
