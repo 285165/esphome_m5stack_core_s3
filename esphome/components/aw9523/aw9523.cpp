@@ -109,7 +109,7 @@ bool AW9523Component::read_pin_value(AW9523Port port, uint8_t pin)
 
 //'esphome::gpio::Flags esphome::aw9523::AW9523GPIOPin::get_flags()'
 
-esphome:gpio::Flags AW9523GPIOPin::get_flags() {
+esphome::gpio::Flags AW9523GPIOPin::get_flags() {
     return gpio::Flags::FLAG_OUTPUT;
 }
 void AW9523GPIOPin::pin_mode(gpio::Flags flags){
